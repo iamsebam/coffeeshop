@@ -53,6 +53,9 @@ dependencies {
 
     implementation(Libs.firebaseAnalyticsKts)
 
+    implementation(Libs.koin)
+
+    testImplementation(Libs.testKoin)
     testImplementation(Libs.junit)
     androidTestImplementation(Libs.androidTestJunit)
     androidTestImplementation(Libs.espressoCore)

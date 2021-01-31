@@ -19,9 +19,11 @@ object Versions {
 
     const val compose = "1.0.0-alpha11"
 
+    const val koin = "2.2.2"
+
     const val firebaseBom = "26.4.0"
 
-    const val junit = "4.17.0"
+    const val junit = "4.13.1"
     const val androidTestJunit = "1.1.2"
     const val espressoCore = "3.3.0"
 
