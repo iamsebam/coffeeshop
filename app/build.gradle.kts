@@ -5,14 +5,14 @@ plugins {
 }
 
 android {
-    compileSdkVersion(30)
+    compileSdkVersion(Versions.compileSdk)
 
     defaultConfig {
         applicationId = "com.sebastianmatyjaszczyk.coffeeshop"
-        minSdkVersion(27)
-        targetSdkVersion(30)
-        versionCode = 1
-        versionName = "1.0"
+        minSdkVersion(Versions.minimumSdk)
+        targetSdkVersion(Versions.targetSdk)
+        versionCode = Versions.versionCode
+        versionName = Versions.versionName
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -24,36 +24,36 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = Versions.javaVersion
+        targetCompatibility = Versions.javaVersion
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = Versions.jvmTarget
         useIR = true
     }
     buildFeatures {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.0.0-alpha08"
-        kotlinCompilerVersion = "1.4.21"
+        kotlinCompilerExtensionVersion = Versions.compose
     }
 }
 
 dependencies {
-    implementation(platform("com.google.firebase:firebase-bom:26.4.0"))
+    implementation(platform(Libs.firebaseBom))
 
-    implementation("androidx.core:core-ktx:1.3.2")
-    implementation("androidx.appcompat:appcompat:1.2.0")
-    implementation("com.google.android.material:material:1.2.1")
-    implementation("androidx.compose.ui:ui:1.0.0-alpha08")
-    implementation("androidx.compose.material:material:1.0.0-alpha08")
-    implementation("androidx.compose.ui:ui-tooling:1.0.0-alpha08")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.3.0-alpha06")
-    implementation("com.google.firebase:firebase-analytics-ktx")
+    implementation(Libs.androidCoreKtx)
+    implementation(Libs.androidAppCompact)
+    implementation(Libs.androidMaterial)
+    implementation(Libs.androidLifecycleRuntimeKtx)
 
+    implementation(Libs.composeUI)
+    implementation(Libs.composeMaterial)
+    implementation(Libs.composeUiTooling)
 
-    testImplementation("junit:junit:4.+")
-    androidTestImplementation("androidx.test.ext:junit:1.1.2")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.3.0")
+    implementation(Libs.firebaseAnalyticsKts)
+
+    testImplementation(Libs.junit)
+    androidTestImplementation(Libs.androidTestJunit)
+    androidTestImplementation(Libs.espressoCore)
 }
