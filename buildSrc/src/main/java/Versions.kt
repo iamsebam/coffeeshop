@@ -9,7 +9,6 @@ object Versions {
     const val targetSdk = 30
     const val compileSdk = 30
 
-    val javaVersion = JavaVersion.VERSION_1_8
     const val jvmTarget = "1.8"
 
     const val androidCoreKtx = "1.3.2"

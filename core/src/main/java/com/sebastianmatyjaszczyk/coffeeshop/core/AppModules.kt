@@ -1,4 +1,4 @@
-package com.sebastianmatyjaszczyk.coffeeshop.di
+package com.sebastianmatyjaszczyk.coffeeshop.core
 
 import org.koin.core.module.Module
 import com.sebastianmatyjaszczyk.feature_landing.di.landingFeatureModules

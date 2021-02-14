@@ -1,8 +1,10 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
     repositories {
-        google()
+        gradlePluginPortal()
         jcenter()
+        google()
+        mavenCentral()
     }
     dependencies {
         classpath(Libs.gradleBuildTools)
@@ -17,7 +19,10 @@ buildscript {
 allprojects {
     repositories {
         google()
+        mavenCentral()
         jcenter()
+        maven(url = "https://dl.bintray.com/ekito/koin")
+        maven(url = "https://jitpack.io")
     }
 }
 
