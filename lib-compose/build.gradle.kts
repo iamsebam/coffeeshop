@@ -1,14 +1,12 @@
 plugins {
-    id("com.android.application")
-    kotlin("android")
-    id("com.google.gms.google-services")
+    id("com.android.library")
+    id("kotlin-android")
 }
 
 android {
     compileSdkVersion(Versions.compileSdk)
 
     defaultConfig {
-        applicationId = "com.sebastianmatyjaszczyk.coffeeshop"
         minSdkVersion(Versions.minimumSdk)
         targetSdkVersion(Versions.targetSdk)
         versionCode = Versions.versionCode
@@ -23,6 +21,7 @@ android {
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
+
     compileOptions {
         sourceCompatibility = Versions.javaVersion
         targetCompatibility = Versions.javaVersion
@@ -31,20 +30,18 @@ android {
         jvmTarget = Versions.jvmTarget
         useIR = true
     }
+    buildFeatures {
+        compose = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = Versions.compose
+    }
 }
 
 dependencies {
-    implementation(project(":feature-landing"))
 
-    implementation(Libs.koin)
+    implementation(Libs.composeUI)
+    implementation(Libs.composeMaterial)
+    implementation(Libs.composeUiTooling)
 
-    implementation(platform(Libs.firebaseBom))
-    implementation(Libs.firebaseAnalyticsKts)
-
-    implementation(Libs.androidAppCompact)
-    implementation(Libs.androidMaterial)
-
-    testImplementation(Libs.junit)
-    androidTestImplementation(Libs.androidTestJunit)
-    androidTestImplementation(Libs.espressoCore)
 }
