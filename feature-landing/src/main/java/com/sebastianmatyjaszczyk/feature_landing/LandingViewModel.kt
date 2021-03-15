@@ -6,5 +6,6 @@ class LandingViewModel(
     private val repository: LandingFeatureRepository
 ) : ViewModel() {
 
-    fun appName() = repository.appName
+    val appName
+        get() = repository.appName
 }

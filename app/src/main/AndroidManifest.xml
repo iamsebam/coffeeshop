@@ -6,6 +6,6 @@
         android:name=".App"
         android:allowBackup="false"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Coffeeshop" />
+        android:theme="@style/Theme.Coffeeshop.NoActionBar" />
 
 </manifest>
