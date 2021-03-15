@@ -1,9 +1,11 @@
 object Libs {
 
     const val androidCoreKtx = "androidx.core:core-ktx:${Versions.androidCoreKtx}"
-    const val androidAppCompact = "androidx.appcompat:appcompat:${Versions.androidAppCompact}"
+    const val androidAppCompat = "androidx.appcompat:appcompat:${Versions.androidAppCompat}"
     const val androidMaterial = "com.google.android.material:material:${Versions.androidMaterial}"
     const val androidLifecycleRuntimeKtx = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.androidLifecycleRuntimeKtx}"
+    const val androidActivityKtx = "androidx.activity:activity-ktx:${Versions.activityKtx}"
+    const val androidActivityCompose = "androidx.activity:activity-compose:${Versions.activityCompose}"
 
     const val composeUI = "androidx.compose.ui:ui:${Versions.compose}"
     const val composeMaterial = "androidx.compose.material:material:${Versions.compose}"
@@ -20,6 +22,6 @@ object Libs {
     const val espressoCore = "androidx.test.espresso:espresso-core:${Versions.espressoCore}"
 
     const val gradleBuildTools = "com.android.tools.build:gradle:${Versions.gradleBuildTools}"
-    const val gradlePlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.gradlePlugin}"
+    const val gradlePlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlinGradlePlugin}"
     const val googleServices = "com.google.gms:google-services:${Versions.googleServices}"
 }

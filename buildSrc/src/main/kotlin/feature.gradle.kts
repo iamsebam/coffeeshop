@@ -1,3 +1,5 @@
+@file:Suppress("UnstableApiUsage")
+
 import org.gradle.kotlin.dsl.dependencies
 import org.gradle.kotlin.dsl.kotlin
 import org.gradle.kotlin.dsl.project
@@ -29,6 +31,8 @@ android {
     }
 
     composeOptions {
+        @Suppress("DEPRECATION")
+        kotlinCompilerVersion = "1.4.31"
         kotlinCompilerExtensionVersion = Versions.compose
     }
 }
@@ -45,7 +49,9 @@ dependencies {
     implementation(Libs.composeUiTooling)
 
     implementation(Libs.androidCoreKtx)
-    implementation(Libs.androidAppCompact)
+    implementation(Libs.androidAppCompat)
     implementation(Libs.androidMaterial)
     implementation(Libs.androidLifecycleRuntimeKtx)
+    implementation(Libs.androidActivityKtx)
+    implementation(Libs.androidActivityCompose)
 }
